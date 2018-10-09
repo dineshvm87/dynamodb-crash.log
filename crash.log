@@ -1,0 +1,1818 @@
+2018/10/09 16:13:20 [INFO] Terraform version: 0.11.8  
+2018/10/09 16:13:20 [INFO] Go runtime version: go1.10.3
+2018/10/09 16:13:20 [INFO] CLI args: []string{"/usr/local/Cellar/terraform/0.11.8/bin/terraform", "apply"}
+2018/10/09 16:13:20 [DEBUG] Attempting to open CLI config file: /Users/dm250080/.terraformrc
+2018/10/09 16:13:20 Loading CLI configuration from /Users/dm250080/.terraformrc
+2018/10/09 16:13:20 [INFO] CLI command args: []string{"apply"}
+2018/10/09 16:13:20 [INFO] command: empty terraform config, returning nil
+2018/10/09 16:13:20 [DEBUG] command: no data state file found for backend config
+2018/10/09 16:13:20 [DEBUG] New state was assigned lineage "05773a49-9912-0c6a-3c7f-2f7e14ef9fa6"
+2018/10/09 16:13:20 [INFO] command: backend initialized: <nil>
+2018/10/09 16:13:20 [DEBUG] checking for provider in "."
+2018/10/09 16:13:20 [DEBUG] checking for provider in "/usr/local/Cellar/terraform/0.11.8/bin"
+2018/10/09 16:13:20 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2018/10/09 16:13:20 [DEBUG] found provider "terraform-provider-aws_v1.39.0_x4"
+2018/10/09 16:13:20 [DEBUG] checking for provider in "/Users/dm250080/.terraform.d/plugins"
+2018/10/09 16:13:20 [ERROR] ignoring non-file /Users/dm250080/.terraform.d/plugins/terraform-provider-aviatrix
+2018/10/09 16:13:20 [DEBUG] found plugin override in .terraformrc: "aviatrix", "/Users/dm250080/go/bin/terraform-provider-aviatrix"
+2018/10/09 16:13:20 [DEBUG] found valid plugin: "aviatrix", "0.0.0", "/Users/dm250080/go/bin/terraform-provider-aviatrix"
+2018/10/09 16:13:20 [DEBUG] found valid plugin: "aws", "1.39.0", "/Users/dm250080/Documents/GitHub/icns-transitvpc2-provisioning/dynamodb/.terraform/plugins/darwin_amd64/terraform-provider-aws_v1.39.0_x4"
+2018/10/09 16:13:20 [DEBUG] checking for provisioner in "."
+2018/10/09 16:13:20 [DEBUG] checking for provisioner in "/usr/local/Cellar/terraform/0.11.8/bin"
+2018/10/09 16:13:20 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2018/10/09 16:13:20 [DEBUG] checking for provisioner in "/Users/dm250080/.terraform.d/plugins"
+2018/10/09 16:13:20 [INFO] command: backend <nil> is not enhanced, wrapping in local
+2018/10/09 16:13:20 [INFO] backend/local: starting Apply operation
+2018/10/09 16:13:20 [TRACE] Preserving existing state lineage "43eacba9-9431-001b-842e-6dd7d35bc411"
+2018/10/09 16:13:20 [TRACE] Preserving existing state lineage "43eacba9-9431-001b-842e-6dd7d35bc411"
+2018/10/09 16:13:20 [INFO] terraform: building graph: GraphTypeInput
+2018/10/09 16:13:20 [TRACE] ConfigTransformer: Starting for path: []
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.LocalTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.OutputTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.OrphanResourceTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.OrphanOutputTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+2018/10/09 16:13:20 [TRACE] AttachResourceConfigTransformer: Beginning...
+2018/10/09 16:13:20 [TRACE] AttachResourceConfigTransformer: Attach resource config request: data.aws_caller_identity.current
+2018/10/09 16:13:20 [TRACE] AttachResourceConfigTransformer: Attach resource config request: aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:20 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"transit_connectivity", Type:"aws_dynamodb_table_item", RawCount:(*config.RawConfig)(0xc42024c230), RawConfig:(*config.RawConfig)(0xc42024c150), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+2018/10/09 16:13:20 [DEBUG] Resource state not found for "aws_dynamodb_table_item.transit_connectivity": aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:20 [DEBUG] Attaching resource state to "data.aws_caller_identity.current": &terraform.ResourceState{Type:"aws_caller_identity", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc42049e690), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] ProviderConfigTransformer: Starting for path: []
+2018/10/09 16:13:20 [TRACE] Attach provider request: []string{} aws
+2018/10/09 16:13:20 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"aws", Alias:"", Version:"", RawConfig:(*config.RawConfig)(0xc42041f7a0)}
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ProviderConfigTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [DEBUG] resource aws_dynamodb_table_item.transit_connectivity using provider provider.aws
+2018/10/09 16:13:20 [DEBUG] resource data.aws_caller_identity.current using provider provider.aws
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.RemovedModuleTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [DEBUG] ReferenceTransformer: "provider.aws" references: [var.aws_secret_key var.region var.aws_access_key]
+2018/10/09 16:13:20 [DEBUG] ReferenceTransformer: "aws_dynamodb_table_item.transit_connectivity" references: []
+2018/10/09 16:13:20 [DEBUG] ReferenceTransformer: "data.aws_caller_identity.current" references: []
+2018/10/09 16:13:20 [DEBUG] ReferenceTransformer: "var.region" references: []
+2018/10/09 16:13:20 [DEBUG] ReferenceTransformer: "var.aws_access_key" references: []
+2018/10/09 16:13:20 [DEBUG] ReferenceTransformer: "var.aws_secret_key" references: []
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.CountBoundaryTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeAbstractResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [DEBUG] Starting graph walk: walkInput
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "var.aws_access_key"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "meta.count-boundary (count boundary fixup)"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "root"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "provider.aws (close)"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "data.aws_caller_identity.current"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "var.aws_secret_key"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "provider.aws"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "var.region"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.aws_access_key"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (count boundary fixup)"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "data.aws_caller_identity.current"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "data.aws_caller_identity.current"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "aws_dynamodb_table_item.transit_connectivity" waiting on "provider.aws"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "data.aws_caller_identity.current" waiting on "provider.aws"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.region"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "root" waiting on "provider.aws (close)"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.aws_secret_key"
+2018/10/09 16:13:20 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (count boundary fixup)", sending new deps
+2018/10/09 16:13:20 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2018/10/09 16:13:20 [TRACE] dag/walk: dependencies changed for "aws_dynamodb_table_item.transit_connectivity", sending new deps
+2018/10/09 16:13:20 [TRACE] dag/walk: dependencies changed for "data.aws_caller_identity.current", sending new deps
+2018/10/09 16:13:20 [TRACE] dag/walk: dependencies changed for "provider.aws (close)", sending new deps
+2018/10/09 16:13:20 [TRACE] dag/walk: dependencies changed for "provider.aws", sending new deps
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "var.aws_access_key"
+2018/10/09 16:13:20 [TRACE] vertex 'root.var.aws_access_key': walking
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "var.region"
+2018/10/09 16:13:20 [TRACE] vertex 'root.var.region': walking
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "var.aws_secret_key"
+2018/10/09 16:13:20 [TRACE] vertex 'root.var.aws_secret_key': walking
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "provider.aws"
+2018/10/09 16:13:20 [TRACE] vertex 'root.provider.aws': walking
+2018/10/09 16:13:20 [TRACE] vertex 'root.provider.aws': evaluating
+2018/10/09 16:13:20 [TRACE] [walkInput] Entering eval tree: provider.aws
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalInitProvider
+2018-10-09T16:13:20.847-0700 [DEBUG] plugin: starting plugin: path=/Users/dm250080/Documents/GitHub/icns-transitvpc2-provisioning/dynamodb/.terraform/plugins/darwin_amd64/terraform-provider-aws_v1.39.0_x4 args=[/Users/dm250080/Documents/GitHub/icns-transitvpc2-provisioning/dynamodb/.terraform/plugins/darwin_amd64/terraform-provider-aws_v1.39.0_x4]
+2018-10-09T16:13:20.857-0700 [DEBUG] plugin: waiting for RPC address: path=/Users/dm250080/Documents/GitHub/icns-transitvpc2-provisioning/dynamodb/.terraform/plugins/darwin_amd64/terraform-provider-aws_v1.39.0_x4
+2018-10-09T16:13:20.870-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: plugin address: timestamp=2018-10-09T16:13:20.869-0700 address=/var/folders/s2/b25hphyj3qn_7yxct5_36qx00000gn/T/plugin471484438 network=unix
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalOpFilter
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalGetProvider
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalInterpolateProvider
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalBuildProviderConfig
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalInputProvider
+2018/10/09 16:13:20 [TRACE] root: eval: terraform.EvalNoop
+2018/10/09 16:13:20 [TRACE] root: eval: terraform.EvalNoop
+2018/10/09 16:13:20 [TRACE] root: eval: terraform.EvalNoop
+2018/10/09 16:13:20 [TRACE] [walkInput] Exiting eval tree: provider.aws
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:20 [TRACE] vertex 'root.aws_dynamodb_table_item.transit_connectivity': walking
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "data.aws_caller_identity.current"
+2018/10/09 16:13:20 [TRACE] vertex 'root.data.aws_caller_identity.current': walking
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "meta.count-boundary (count boundary fixup)"
+2018/10/09 16:13:20 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': walking
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "provider.aws (close)"
+2018/10/09 16:13:20 [TRACE] vertex 'root.provider.aws (close)': walking
+2018/10/09 16:13:20 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': evaluating
+2018/10/09 16:13:20 [TRACE] vertex 'root.provider.aws (close)': evaluating
+2018/10/09 16:13:20 [TRACE] [walkInput] Entering eval tree: provider.aws (close)
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalCloseProvider
+2018/10/09 16:13:20 [TRACE] [walkInput] Entering eval tree: meta.count-boundary (count boundary fixup)
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2018/10/09 16:13:20 [TRACE] [walkInput] Exiting eval tree: provider.aws (close)
+2018/10/09 16:13:20 [TRACE] EvalCountFixZeroOneBoundaryGlobal: count 1, search "data.aws_caller_identity.current.0", replace "data.aws_caller_identity.current"
+2018/10/09 16:13:20 [TRACE] [walkInput] Exiting eval tree: meta.count-boundary (count boundary fixup)
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "root"
+2018/10/09 16:13:20 [TRACE] vertex 'root.root': walking
+2018/10/09 16:13:20 [INFO] terraform: building graph: GraphTypeValidate
+2018/10/09 16:13:20 [TRACE] ConfigTransformer: Starting for path: []
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.LocalTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.OutputTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.OrphanResourceTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.OrphanOutputTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+2018/10/09 16:13:20 [TRACE] AttachResourceConfigTransformer: Beginning...
+2018/10/09 16:13:20 [TRACE] AttachResourceConfigTransformer: Attach resource config request: aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:20 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"transit_connectivity", Type:"aws_dynamodb_table_item", RawCount:(*config.RawConfig)(0xc42024c230), RawConfig:(*config.RawConfig)(0xc42024c150), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2018/10/09 16:13:20 [TRACE] AttachResourceConfigTransformer: Attach resource config request: data.aws_caller_identity.current
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+2018/10/09 16:13:20 [DEBUG] Resource state not found for "aws_dynamodb_table_item.transit_connectivity": aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:20 [DEBUG] Attaching resource state to "data.aws_caller_identity.current": &terraform.ResourceState{Type:"aws_caller_identity", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc42049e690), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] ProviderConfigTransformer: Starting for path: []
+2018/10/09 16:13:20 [TRACE] Attach provider request: []string{} aws
+2018/10/09 16:13:20 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"aws", Alias:"", Version:"", RawConfig:(*config.RawConfig)(0xc42041f7a0)}
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ProviderConfigTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [DEBUG] resource aws_dynamodb_table_item.transit_connectivity using provider provider.aws
+2018/10/09 16:13:20 [DEBUG] resource data.aws_caller_identity.current using provider provider.aws
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.MissingProvisionerTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ProvisionerTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.RemovedModuleTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [DEBUG] ReferenceTransformer: "aws_dynamodb_table_item.transit_connectivity" references: []
+2018/10/09 16:13:20 [DEBUG] ReferenceTransformer: "data.aws_caller_identity.current" references: []
+2018/10/09 16:13:20 [DEBUG] ReferenceTransformer: "var.region" references: []
+2018/10/09 16:13:20 [DEBUG] ReferenceTransformer: "var.aws_access_key" references: []
+2018/10/09 16:13:20 [DEBUG] ReferenceTransformer: "var.aws_secret_key" references: []
+2018/10/09 16:13:20 [DEBUG] ReferenceTransformer: "provider.aws" references: [var.aws_secret_key var.region var.aws_access_key]
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.CountBoundaryTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResource
+  data.aws_caller_identity.current - *terraform.NodeAbstractResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [DEBUG] Starting graph walk: walkValidate
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "meta.count-boundary (count boundary fixup)"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "data.aws_caller_identity.current"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "var.region"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "root"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "var.aws_secret_key"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "provider.aws"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "provider.aws (close)"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "var.aws_access_key"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "data.aws_caller_identity.current"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "data.aws_caller_identity.current" waiting on "provider.aws"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "data.aws_caller_identity.current"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (count boundary fixup)"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "root" waiting on "provider.aws (close)"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.aws_secret_key"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "aws_dynamodb_table_item.transit_connectivity" waiting on "provider.aws"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.region"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.aws_access_key"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:20 [TRACE] dag/walk: dependencies changed for "provider.aws (close)", sending new deps
+2018/10/09 16:13:20 [TRACE] dag/walk: dependencies changed for "data.aws_caller_identity.current", sending new deps
+2018/10/09 16:13:20 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2018/10/09 16:13:20 [TRACE] dag/walk: dependencies changed for "provider.aws", sending new deps
+2018/10/09 16:13:20 [TRACE] dag/walk: dependencies changed for "aws_dynamodb_table_item.transit_connectivity", sending new deps
+2018/10/09 16:13:20 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (count boundary fixup)", sending new deps
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "var.region"
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "var.aws_access_key"
+2018/10/09 16:13:20 [TRACE] vertex 'root.var.region': walking
+2018/10/09 16:13:20 [TRACE] vertex 'root.var.aws_access_key': walking
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "var.aws_secret_key"
+2018/10/09 16:13:20 [TRACE] vertex 'root.var.aws_secret_key': walking
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "provider.aws"
+2018/10/09 16:13:20 [TRACE] vertex 'root.provider.aws': walking
+2018/10/09 16:13:20 [TRACE] vertex 'root.provider.aws': evaluating
+2018/10/09 16:13:20 [TRACE] [walkValidate] Entering eval tree: provider.aws
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalInitProvider
+2018/10/09 16:13:20 [TRACE] root: eval: terraform.EvalNoop
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalOpFilter
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalGetProvider
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalInterpolateProvider
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalBuildProviderConfig
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalValidateProvider
+2018/10/09 16:13:20 [TRACE] root: eval: terraform.EvalNoop
+2018/10/09 16:13:20 [TRACE] root: eval: terraform.EvalNoop
+2018/10/09 16:13:20 [TRACE] [walkValidate] Exiting eval tree: provider.aws
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "data.aws_caller_identity.current"
+2018/10/09 16:13:20 [TRACE] vertex 'root.data.aws_caller_identity.current': walking
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:20 [TRACE] vertex 'root.aws_dynamodb_table_item.transit_connectivity': walking
+2018/10/09 16:13:20 [TRACE] vertex 'root.aws_dynamodb_table_item.transit_connectivity': evaluating
+2018/10/09 16:13:20 [TRACE] [walkValidate] Entering eval tree: aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalInterpolate
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalIf
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalValidateCount
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2018/10/09 16:13:20 [TRACE] [walkValidate] Exiting eval tree: aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:20 [TRACE] vertex 'root.aws_dynamodb_table_item.transit_connectivity': expanding/walking dynamic subgraph
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResourceInstance
+2018/10/09 16:13:20 [DEBUG] Resource state not found for "aws_dynamodb_table_item.transit_connectivity": aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResourceInstance
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResourceInstance
+2018/10/09 16:13:20 [DEBUG] ReferenceTransformer: "aws_dynamodb_table_item.transit_connectivity" references: []
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResourceInstance
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeValidatableResourceInstance
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:20 [TRACE] vertex 'root.aws_dynamodb_table_item.transit_connectivity': walking
+2018/10/09 16:13:20 [TRACE] vertex 'root.aws_dynamodb_table_item.transit_connectivity': evaluating
+2018/10/09 16:13:20 [TRACE] [walkValidate] Entering eval tree: aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalValidateResourceSelfRef
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalGetProvider
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalInterpolate
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalValidateResource
+2018/10/09 16:13:20 [TRACE] [walkValidate] Exiting eval tree: aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "meta.count-boundary (count boundary fixup)"
+2018/10/09 16:13:20 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': walking
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "provider.aws (close)"
+2018/10/09 16:13:20 [TRACE] vertex 'root.provider.aws (close)': walking
+2018/10/09 16:13:20 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': evaluating
+2018/10/09 16:13:20 [TRACE] vertex 'root.provider.aws (close)': evaluating
+2018/10/09 16:13:20 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (count boundary fixup)
+2018/10/09 16:13:20 [TRACE] [walkValidate] Entering eval tree: provider.aws (close)
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalCloseProvider
+2018/10/09 16:13:20 [TRACE] EvalCountFixZeroOneBoundaryGlobal: count 1, search "data.aws_caller_identity.current.0", replace "data.aws_caller_identity.current"
+2018/10/09 16:13:20 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (count boundary fixup)
+2018/10/09 16:13:20 [TRACE] [walkValidate] Exiting eval tree: provider.aws (close)
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "root"
+2018/10/09 16:13:20 [TRACE] vertex 'root.root': walking
+2018/10/09 16:13:20 [INFO] backend/local: apply calling Refresh
+2018/10/09 16:13:20 [INFO] terraform: building graph: GraphTypeRefresh
+2018/10/09 16:13:20 [TRACE] ConfigTransformer: Starting for path: []
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+2018/10/09 16:13:20 [TRACE] ConfigTransformer: Starting for path: []
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.OrphanResourceTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+2018/10/09 16:13:20 [DEBUG] Resource state not found for "aws_dynamodb_table_item.transit_connectivity": aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:20 [DEBUG] Attaching resource state to "data.aws_caller_identity.current": &terraform.ResourceState{Type:"aws_caller_identity", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc4202bad70), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+2018/10/09 16:13:20 [TRACE] AttachResourceConfigTransformer: Beginning...
+2018/10/09 16:13:20 [TRACE] AttachResourceConfigTransformer: Attach resource config request: aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:20 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"transit_connectivity", Type:"aws_dynamodb_table_item", RawCount:(*config.RawConfig)(0xc42024c230), RawConfig:(*config.RawConfig)(0xc42024c150), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2018/10/09 16:13:20 [TRACE] AttachResourceConfigTransformer: Attach resource config request: data.aws_caller_identity.current
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] ProviderConfigTransformer: Starting for path: []
+2018/10/09 16:13:20 [TRACE] Attach provider request: []string{} aws
+2018/10/09 16:13:20 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"aws", Alias:"", Version:"", RawConfig:(*config.RawConfig)(0xc42041f7a0)}
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ProviderConfigTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [DEBUG] resource data.aws_caller_identity.current using provider provider.aws
+2018/10/09 16:13:20 [DEBUG] resource aws_dynamodb_table_item.transit_connectivity using provider provider.aws
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.LocalTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.OutputTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [DEBUG] ReferenceTransformer: "aws_dynamodb_table_item.transit_connectivity" references: []
+2018/10/09 16:13:20 [DEBUG] ReferenceTransformer: "data.aws_caller_identity.current" references: []
+2018/10/09 16:13:20 [DEBUG] ReferenceTransformer: "var.region" references: []
+2018/10/09 16:13:20 [DEBUG] ReferenceTransformer: "var.aws_access_key" references: []
+2018/10/09 16:13:20 [DEBUG] ReferenceTransformer: "var.aws_secret_key" references: []
+2018/10/09 16:13:20 [DEBUG] ReferenceTransformer: "provider.aws" references: [var.aws_secret_key var.region var.aws_access_key]
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+  data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+  data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResource
+  data.aws_caller_identity.current - *terraform.NodeRefreshableManagedResourceInstance
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:20 [DEBUG] Starting graph walk: walkRefresh
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "data.aws_caller_identity.current"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "var.region"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "var.aws_access_key"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "var.aws_secret_key"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "provider.aws"
+2018/10/09 16:13:20 [TRACE] dag/walk: added new vertex: "provider.aws (close)"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "aws_dynamodb_table_item.transit_connectivity" waiting on "provider.aws"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.aws_secret_key"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.region"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.aws_access_key"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "data.aws_caller_identity.current"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:20 [TRACE] dag/walk: added edge: "data.aws_caller_identity.current" waiting on "provider.aws"
+2018/10/09 16:13:20 [TRACE] dag/walk: dependencies changed for "aws_dynamodb_table_item.transit_connectivity", sending new deps
+2018/10/09 16:13:20 [TRACE] dag/walk: dependencies changed for "provider.aws", sending new deps
+2018/10/09 16:13:20 [TRACE] dag/walk: dependencies changed for "provider.aws (close)", sending new deps
+2018/10/09 16:13:20 [TRACE] dag/walk: dependencies changed for "data.aws_caller_identity.current", sending new deps
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "var.aws_access_key"
+2018/10/09 16:13:20 [TRACE] vertex 'root.var.aws_access_key': walking
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "var.aws_secret_key"
+2018/10/09 16:13:20 [TRACE] vertex 'root.var.aws_secret_key': walking
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "var.region"
+2018/10/09 16:13:20 [TRACE] vertex 'root.var.region': walking
+2018/10/09 16:13:20 [TRACE] dag/walk: walking "provider.aws"
+2018/10/09 16:13:20 [TRACE] vertex 'root.provider.aws': walking
+2018/10/09 16:13:20 [TRACE] vertex 'root.provider.aws': evaluating
+2018/10/09 16:13:20 [TRACE] [walkRefresh] Entering eval tree: provider.aws
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalInitProvider
+2018/10/09 16:13:20 [TRACE] root: eval: terraform.EvalNoop
+2018/10/09 16:13:20 [TRACE] root: eval: terraform.EvalNoop
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalOpFilter
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalGetProvider
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalInterpolateProvider
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalBuildProviderConfig
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalOpFilter
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:20 [TRACE] root: eval: *terraform.EvalConfigProvider
+2018-10-09T16:13:20.926-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:20 [INFO] No assume_role block read from configuration
+2018-10-09T16:13:20.926-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:20 [INFO] Building AWS region structure
+2018-10-09T16:13:20.926-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:20 [INFO] Building AWS auth structure
+2018-10-09T16:13:20.926-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:20 [INFO] Setting AWS metadata API timeout to 100ms
+2018-10-09T16:13:21.617-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:21 [INFO] Ignoring AWS metadata API endpoint at default location as it doesn't return any instance-id
+2018-10-09T16:13:21.618-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:21 [INFO] AWS Auth provider used: "StaticProvider"
+2018-10-09T16:13:21.618-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:21 [INFO] Initializing DeviceFarm SDK connection
+2018-10-09T16:13:21.618-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:21 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2018/10/09 16:13:22 [TRACE] [walkRefresh] Exiting eval tree: provider.aws
+2018/10/09 16:13:22 [TRACE] dag/walk: walking "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:22 [TRACE] vertex 'root.aws_dynamodb_table_item.transit_connectivity': walking
+2018/10/09 16:13:22 [TRACE] dag/walk: walking "data.aws_caller_identity.current"
+2018/10/09 16:13:22 [TRACE] vertex 'root.data.aws_caller_identity.current': walking
+2018/10/09 16:13:22 [TRACE] vertex 'root.aws_dynamodb_table_item.transit_connectivity': evaluating
+2018/10/09 16:13:22 [TRACE] vertex 'root.data.aws_caller_identity.current': evaluating
+2018/10/09 16:13:22 [TRACE] [walkRefresh] Entering eval tree: aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalInterpolate
+2018/10/09 16:13:22 [TRACE] [walkRefresh] Entering eval tree: data.aws_caller_identity.current
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalWriteState
+2018/10/09 16:13:22 [TRACE] [walkRefresh] Exiting eval tree: data.aws_caller_identity.current
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalCountCheckComputed
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalIf
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2018/10/09 16:13:22 [TRACE] [walkRefresh] Exiting eval tree: aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:22 [TRACE] vertex 'root.aws_dynamodb_table_item.transit_connectivity': expanding/walking dynamic subgraph
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResourceInstance
+2018/10/09 16:13:22 [TRACE] OrphanResourceCount: Starting...
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.OrphanResourceCountTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResourceInstance
+2018/10/09 16:13:22 [DEBUG] Resource state not found for "aws_dynamodb_table_item.transit_connectivity": aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResourceInstance
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResourceInstance
+2018/10/09 16:13:22 [DEBUG] ReferenceTransformer: "aws_dynamodb_table_item.transit_connectivity" references: []
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResourceInstance
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeRefreshableManagedResourceInstance
+2018/10/09 16:13:22 [TRACE] dag/walk: added new vertex: "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:22 [TRACE] dag/walk: walking "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:22 [TRACE] vertex 'root.aws_dynamodb_table_item.transit_connectivity': walking
+2018/10/09 16:13:22 [TRACE] vertex 'root.aws_dynamodb_table_item.transit_connectivity': evaluating
+2018/10/09 16:13:22 [TRACE] [walkRefresh] Entering eval tree: aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalInterpolate
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalGetProvider
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalValidateResource
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalReadState
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalDiff
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalWriteState
+2018/10/09 16:13:22 [TRACE] [walkRefresh] Exiting eval tree: aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:22 [TRACE] dag/walk: walking "provider.aws (close)"
+2018/10/09 16:13:22 [TRACE] vertex 'root.provider.aws (close)': walking
+2018/10/09 16:13:22 [TRACE] vertex 'root.provider.aws (close)': evaluating
+2018/10/09 16:13:22 [TRACE] [walkRefresh] Entering eval tree: provider.aws (close)
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalCloseProvider
+2018/10/09 16:13:22 [TRACE] [walkRefresh] Exiting eval tree: provider.aws (close)
+2018/10/09 16:13:22 [INFO] backend/local: apply calling Plan
+2018/10/09 16:13:22 [INFO] terraform: building graph: GraphTypePlan
+2018/10/09 16:13:22 [TRACE] ConfigTransformer: Starting for path: []
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.LocalTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.OutputTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.OrphanResourceTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.OrphanOutputTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+2018/10/09 16:13:22 [TRACE] AttachResourceConfigTransformer: Beginning...
+2018/10/09 16:13:22 [TRACE] AttachResourceConfigTransformer: Attach resource config request: aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:22 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"transit_connectivity", Type:"aws_dynamodb_table_item", RawCount:(*config.RawConfig)(0xc42024c230), RawConfig:(*config.RawConfig)(0xc42024c150), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+2018/10/09 16:13:22 [DEBUG] Resource state not found for "aws_dynamodb_table_item.transit_connectivity": aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:22 [TRACE] ProviderConfigTransformer: Starting for path: []
+2018/10/09 16:13:22 [TRACE] Attach provider request: []string{} aws
+2018/10/09 16:13:22 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"aws", Alias:"", Version:"", RawConfig:(*config.RawConfig)(0xc42041f7a0)}
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.ProviderConfigTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:22 [DEBUG] resource aws_dynamodb_table_item.transit_connectivity using provider provider.aws
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.RemovedModuleTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:22 [DEBUG] ReferenceTransformer: "aws_dynamodb_table_item.transit_connectivity" references: []
+2018/10/09 16:13:22 [DEBUG] ReferenceTransformer: "var.region" references: []
+2018/10/09 16:13:22 [DEBUG] ReferenceTransformer: "var.aws_access_key" references: []
+2018/10/09 16:13:22 [DEBUG] ReferenceTransformer: "var.aws_secret_key" references: []
+2018/10/09 16:13:22 [DEBUG] ReferenceTransformer: "provider.aws" references: [var.aws_secret_key var.region var.aws_access_key]
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.CountBoundaryTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:22 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:22 [DEBUG] Starting graph walk: walkPlan
+2018/10/09 16:13:22 [TRACE] dag/walk: added new vertex: "provider.aws (close)"
+2018/10/09 16:13:22 [TRACE] dag/walk: added new vertex: "root"
+2018/10/09 16:13:22 [TRACE] dag/walk: added new vertex: "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:22 [TRACE] dag/walk: added new vertex: "var.region"
+2018/10/09 16:13:22 [TRACE] dag/walk: added new vertex: "var.aws_access_key"
+2018/10/09 16:13:22 [TRACE] dag/walk: added new vertex: "var.aws_secret_key"
+2018/10/09 16:13:22 [TRACE] dag/walk: added new vertex: "provider.aws"
+2018/10/09 16:13:22 [TRACE] dag/walk: added new vertex: "meta.count-boundary (count boundary fixup)"
+2018/10/09 16:13:22 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.region"
+2018/10/09 16:13:22 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (count boundary fixup)"
+2018/10/09 16:13:22 [TRACE] dag/walk: added edge: "root" waiting on "provider.aws (close)"
+2018/10/09 16:13:22 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.aws_secret_key"
+2018/10/09 16:13:22 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.aws_access_key"
+2018/10/09 16:13:22 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:22 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:22 [TRACE] dag/walk: added edge: "aws_dynamodb_table_item.transit_connectivity" waiting on "provider.aws"
+2018/10/09 16:13:22 [TRACE] dag/walk: dependencies changed for "provider.aws", sending new deps
+2018/10/09 16:13:22 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2018/10/09 16:13:22 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (count boundary fixup)", sending new deps
+2018/10/09 16:13:22 [TRACE] dag/walk: dependencies changed for "provider.aws (close)", sending new deps
+2018/10/09 16:13:22 [TRACE] dag/walk: dependencies changed for "aws_dynamodb_table_item.transit_connectivity", sending new deps
+2018/10/09 16:13:22 [TRACE] dag/walk: walking "var.aws_secret_key"
+2018/10/09 16:13:22 [TRACE] dag/walk: walking "var.region"
+2018/10/09 16:13:22 [TRACE] vertex 'root.var.aws_secret_key': walking
+2018/10/09 16:13:22 [TRACE] vertex 'root.var.region': walking
+2018/10/09 16:13:22 [TRACE] dag/walk: walking "var.aws_access_key"
+2018/10/09 16:13:22 [TRACE] vertex 'root.var.aws_access_key': walking
+2018/10/09 16:13:22 [TRACE] dag/walk: walking "provider.aws"
+2018/10/09 16:13:22 [TRACE] vertex 'root.provider.aws': walking
+2018/10/09 16:13:22 [TRACE] vertex 'root.provider.aws': evaluating
+2018/10/09 16:13:22 [TRACE] [walkPlan] Entering eval tree: provider.aws
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalInitProvider
+2018/10/09 16:13:22 [TRACE] root: eval: terraform.EvalNoop
+2018/10/09 16:13:22 [TRACE] root: eval: terraform.EvalNoop
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalOpFilter
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalGetProvider
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalInterpolateProvider
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalBuildProviderConfig
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalOpFilter
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:22 [TRACE] root: eval: *terraform.EvalConfigProvider
+2018-10-09T16:13:22.347-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:22 [INFO] No assume_role block read from configuration
+2018-10-09T16:13:22.347-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:22 [INFO] Building AWS region structure
+2018-10-09T16:13:22.347-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:22 [INFO] Building AWS auth structure
+2018-10-09T16:13:22.347-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:22 [INFO] Setting AWS metadata API timeout to 100ms
+2018-10-09T16:13:22.916-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:22 [INFO] Ignoring AWS metadata API endpoint at default location as it doesn't return any instance-id
+2018-10-09T16:13:22.916-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:22 [INFO] AWS Auth provider used: "StaticProvider"
+2018-10-09T16:13:22.916-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:22 [INFO] Initializing DeviceFarm SDK connection
+2018-10-09T16:13:22.916-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:22 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2018/10/09 16:13:23 [TRACE] [walkPlan] Exiting eval tree: provider.aws
+2018/10/09 16:13:23 [TRACE] dag/walk: walking "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:23 [TRACE] vertex 'root.aws_dynamodb_table_item.transit_connectivity': walking
+2018/10/09 16:13:23 [TRACE] vertex 'root.aws_dynamodb_table_item.transit_connectivity': evaluating
+2018/10/09 16:13:23 [TRACE] [walkPlan] Entering eval tree: aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:23 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:23 [TRACE] root: eval: *terraform.EvalInterpolate
+2018/10/09 16:13:23 [TRACE] root: eval: *terraform.EvalCountCheckComputed
+2018/10/09 16:13:23 [TRACE] root: eval: *terraform.EvalIf
+2018/10/09 16:13:23 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2018/10/09 16:13:23 [TRACE] [walkPlan] Exiting eval tree: aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:23 [TRACE] vertex 'root.aws_dynamodb_table_item.transit_connectivity': expanding/walking dynamic subgraph
+2018/10/09 16:13:23 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResourceInstance
+2018/10/09 16:13:23 [TRACE] OrphanResourceCount: Starting...
+2018/10/09 16:13:23 [TRACE] Graph after step *terraform.OrphanResourceCountTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResourceInstance
+2018/10/09 16:13:23 [DEBUG] Resource state not found for "aws_dynamodb_table_item.transit_connectivity": aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:23 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResourceInstance
+2018/10/09 16:13:23 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResourceInstance
+2018/10/09 16:13:23 [DEBUG] ReferenceTransformer: "aws_dynamodb_table_item.transit_connectivity" references: []
+2018/10/09 16:13:23 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResourceInstance
+2018/10/09 16:13:23 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodePlannableResourceInstance
+2018/10/09 16:13:23 [TRACE] dag/walk: added new vertex: "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:23 [TRACE] dag/walk: walking "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:23 [TRACE] vertex 'root.aws_dynamodb_table_item.transit_connectivity': walking
+2018/10/09 16:13:23 [TRACE] vertex 'root.aws_dynamodb_table_item.transit_connectivity': evaluating
+2018/10/09 16:13:23 [TRACE] [walkPlan] Entering eval tree: aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:23 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:23 [TRACE] root: eval: *terraform.EvalInterpolate
+2018/10/09 16:13:23 [TRACE] root: eval: *terraform.EvalGetProvider
+2018/10/09 16:13:23 [TRACE] root: eval: *terraform.EvalValidateResource
+2018/10/09 16:13:23 [TRACE] root: eval: *terraform.EvalReadState
+2018/10/09 16:13:23 [TRACE] root: eval: *terraform.EvalDiff
+2018/10/09 16:13:23 [TRACE] root: eval: *terraform.EvalCheckPreventDestroy
+2018/10/09 16:13:23 [TRACE] root: eval: *terraform.EvalWriteState
+2018/10/09 16:13:23 [TRACE] root: eval: *terraform.EvalWriteDiff
+2018/10/09 16:13:23 [TRACE] [walkPlan] Exiting eval tree: aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:23 [TRACE] dag/walk: walking "meta.count-boundary (count boundary fixup)"
+2018/10/09 16:13:23 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': walking
+2018/10/09 16:13:23 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': evaluating
+2018/10/09 16:13:23 [TRACE] dag/walk: walking "provider.aws (close)"
+2018/10/09 16:13:23 [TRACE] [walkPlan] Entering eval tree: meta.count-boundary (count boundary fixup)
+2018/10/09 16:13:23 [TRACE] vertex 'root.provider.aws (close)': walking
+2018/10/09 16:13:23 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2018/10/09 16:13:23 [TRACE] [walkPlan] Exiting eval tree: meta.count-boundary (count boundary fixup)
+2018/10/09 16:13:23 [TRACE] vertex 'root.provider.aws (close)': evaluating
+2018/10/09 16:13:23 [TRACE] [walkPlan] Entering eval tree: provider.aws (close)
+2018/10/09 16:13:23 [TRACE] root: eval: *terraform.EvalCloseProvider
+2018/10/09 16:13:23 [TRACE] [walkPlan] Exiting eval tree: provider.aws (close)
+2018/10/09 16:13:23 [TRACE] dag/walk: walking "root"
+2018/10/09 16:13:23 [TRACE] vertex 'root.root': walking
+2018/10/09 16:13:23 [DEBUG] command: asking for input: "Do you want to perform these actions?"
+2018/10/09 16:13:25 [INFO] terraform: building graph: GraphTypeApply
+2018/10/09 16:13:25 [TRACE] DiffTransformer: starting
+2018/10/09 16:13:25 [TRACE] DiffTransformer: Module: CREATE: aws_dynamodb_table_item.transit_connectivity
+  hash_key:   "" => "aws:ca-central-1" (forces new resource)
+  item:       "" => "{\n \"hub_id\": {\"S\": \"aws:ca-central-1\"},\n \"name\": {\"S\": \"aviatrix-avx-transit-gw@10.89.54.111\"}\n}\n"
+  table_name: "" => "transit_connectivity_hubs" (forces new resource)
+2018/10/09 16:13:25 [TRACE] DiffTransformer: Resource "aws_dynamodb_table_item.transit_connectivity": *terraform.InstanceDiff{mu:sync.Mutex{state:0, sema:0x0}, Attributes:map[string]*terraform.ResourceAttrDiff{"table_name":*terraform.ResourceAttrDiff{Old:"", New:"transit_connectivity_hubs", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x0}, "hash_key":*terraform.ResourceAttrDiff{Old:"", New:"aws:ca-central-1", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x0}, "item":*terraform.ResourceAttrDiff{Old:"", New:"{\n \"hub_id\": {\"S\": \"aws:ca-central-1\"},\n \"name\": {\"S\": \"aviatrix-avx-transit-gw@10.89.54.111\"}\n}\n", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "id":*terraform.ResourceAttrDiff{Old:"", New:"", NewComputed:true, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x2}}, Destroy:false, DestroyDeposed:false, DestroyTainted:false, Meta:map[string]interface {}(nil)}
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.DiffTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.OrphanOutputTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+2018/10/09 16:13:25 [TRACE] AttachResourceConfigTransformer: Beginning...
+2018/10/09 16:13:25 [TRACE] AttachResourceConfigTransformer: Attach resource config request: aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:25 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"transit_connectivity", Type:"aws_dynamodb_table_item", RawCount:(*config.RawConfig)(0xc42024c230), RawConfig:(*config.RawConfig)(0xc42024c150), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+2018/10/09 16:13:25 [DEBUG] Resource state not found for "aws_dynamodb_table_item.transit_connectivity": aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+2018/10/09 16:13:25 [TRACE] ProviderConfigTransformer: Starting for path: []
+2018/10/09 16:13:25 [TRACE] Attach provider request: []string{} aws
+2018/10/09 16:13:25 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"aws", Alias:"", Version:"", RawConfig:(*config.RawConfig)(0xc42041f7a0)}
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.ProviderConfigTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+provider.aws - *terraform.NodeApplyableProvider
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+provider.aws - *terraform.NodeApplyableProvider
+2018/10/09 16:13:25 [DEBUG] resource aws_dynamodb_table_item.transit_connectivity using provider provider.aws
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+2018/10/09 16:13:25 [TRACE] DestroyEdgeTransformer: Beginning destroy edge transformation...
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.DestroyEdgeTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+2018/10/09 16:13:25 [TRACE] CBDEdgeTransformer: Beginning CBD transformation...
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.CBDEdgeTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.MissingProvisionerTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.ProvisionerTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.LocalTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.OutputTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.RemovedModuleTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:25 [DEBUG] ReferenceTransformer: "var.region" references: []
+2018/10/09 16:13:25 [DEBUG] ReferenceTransformer: "var.aws_access_key" references: []
+2018/10/09 16:13:25 [DEBUG] ReferenceTransformer: "var.aws_secret_key" references: []
+2018/10/09 16:13:25 [DEBUG] ReferenceTransformer: "aws_dynamodb_table_item.transit_connectivity" references: []
+2018/10/09 16:13:25 [DEBUG] ReferenceTransformer: "provider.aws" references: [var.aws_secret_key var.region var.aws_access_key]
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.CountBoundaryTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:25 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.aws_access_key - *terraform.NodeRootVariable
+  var.aws_secret_key - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_dynamodb_table_item.transit_connectivity - *terraform.NodeApplyableResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+var.aws_access_key - *terraform.NodeRootVariable
+var.aws_secret_key - *terraform.NodeRootVariable
+var.region - *terraform.NodeRootVariable
+2018/10/09 16:13:25 [DEBUG] Starting graph walk: walkApply
+2018/10/09 16:13:25 [TRACE] dag/walk: added new vertex: "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:25 [TRACE] dag/walk: added new vertex: "provider.aws"
+2018/10/09 16:13:25 [TRACE] dag/walk: added new vertex: "var.region"
+2018/10/09 16:13:25 [TRACE] dag/walk: added new vertex: "var.aws_access_key"
+2018/10/09 16:13:25 [TRACE] dag/walk: added new vertex: "var.aws_secret_key"
+2018/10/09 16:13:25 [TRACE] dag/walk: added new vertex: "meta.count-boundary (count boundary fixup)"
+2018/10/09 16:13:25 [TRACE] dag/walk: added new vertex: "provider.aws (close)"
+2018/10/09 16:13:25 [TRACE] dag/walk: added new vertex: "root"
+2018/10/09 16:13:25 [TRACE] dag/walk: added edge: "root" waiting on "provider.aws (close)"
+2018/10/09 16:13:25 [TRACE] dag/walk: added edge: "aws_dynamodb_table_item.transit_connectivity" waiting on "provider.aws"
+2018/10/09 16:13:25 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:25 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (count boundary fixup)"
+2018/10/09 16:13:25 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.aws_secret_key"
+2018/10/09 16:13:25 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.region"
+2018/10/09 16:13:25 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.aws_access_key"
+2018/10/09 16:13:25 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:25 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2018/10/09 16:13:25 [TRACE] dag/walk: dependencies changed for "aws_dynamodb_table_item.transit_connectivity", sending new deps
+2018/10/09 16:13:25 [TRACE] dag/walk: dependencies changed for "provider.aws (close)", sending new deps
+2018/10/09 16:13:25 [TRACE] dag/walk: dependencies changed for "provider.aws", sending new deps
+2018/10/09 16:13:25 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (count boundary fixup)", sending new deps
+2018/10/09 16:13:25 [TRACE] dag/walk: walking "var.region"
+2018/10/09 16:13:25 [TRACE] dag/walk: walking "var.aws_secret_key"
+2018/10/09 16:13:25 [TRACE] dag/walk: walking "var.aws_access_key"
+2018/10/09 16:13:25 [TRACE] vertex 'root.var.aws_secret_key': walking
+2018/10/09 16:13:25 [TRACE] vertex 'root.var.aws_access_key': walking
+2018/10/09 16:13:25 [TRACE] vertex 'root.var.region': walking
+2018/10/09 16:13:25 [TRACE] dag/walk: walking "provider.aws"
+2018/10/09 16:13:25 [TRACE] vertex 'root.provider.aws': walking
+2018/10/09 16:13:25 [TRACE] vertex 'root.provider.aws': evaluating
+2018/10/09 16:13:25 [TRACE] [walkApply] Entering eval tree: provider.aws
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalInitProvider
+2018/10/09 16:13:25 [TRACE] root: eval: terraform.EvalNoop
+2018/10/09 16:13:25 [TRACE] root: eval: terraform.EvalNoop
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalOpFilter
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalGetProvider
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalInterpolateProvider
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalBuildProviderConfig
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalOpFilter
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalConfigProvider
+2018-10-09T16:13:25.148-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:25 [INFO] No assume_role block read from configuration
+2018-10-09T16:13:25.148-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:25 [INFO] Building AWS region structure
+2018-10-09T16:13:25.148-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:25 [INFO] Building AWS auth structure
+2018-10-09T16:13:25.148-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:25 [INFO] Setting AWS metadata API timeout to 100ms
+2018-10-09T16:13:25.492-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:25 [INFO] Ignoring AWS metadata API endpoint at default location as it doesn't return any instance-id
+2018-10-09T16:13:25.493-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:25 [INFO] AWS Auth provider used: "StaticProvider"
+2018-10-09T16:13:25.493-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:25 [INFO] Initializing DeviceFarm SDK connection
+2018-10-09T16:13:25.493-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:25 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2018/10/09 16:13:25 [TRACE] [walkApply] Exiting eval tree: provider.aws
+2018/10/09 16:13:25 [TRACE] dag/walk: walking "aws_dynamodb_table_item.transit_connectivity"
+2018/10/09 16:13:25 [TRACE] vertex 'root.aws_dynamodb_table_item.transit_connectivity': walking
+2018/10/09 16:13:25 [TRACE] vertex 'root.aws_dynamodb_table_item.transit_connectivity': evaluating
+2018/10/09 16:13:25 [TRACE] [walkApply] Entering eval tree: aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalSequence
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalInstanceInfo
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalReadDiff
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalIf
+2018/10/09 16:13:25 [TRACE] root: eval: terraform.EvalNoop
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalIf
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalInterpolate
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalInterpolate
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalGetProvider
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalReadState
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalValidateResource
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalDiff
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalReadDiff
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalCompareDiff
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalGetProvider
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalReadState
+2018/10/09 16:13:25 [TRACE] root: eval: *terraform.EvalApplyPre
+2018/10/09 16:13:26 [TRACE] root: eval: *terraform.EvalApply
+2018/10/09 16:13:26 [DEBUG] apply: aws_dynamodb_table_item.transit_connectivity: executing Apply
+2018-10-09T16:13:26.004-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 2018/10/09 16:13:26 [DEBUG] DynamoDB item create: transit_connectivity_hubs
+2018-10-09T16:13:26.280-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: panic: runtime error: invalid memory address or nil pointer dereference
+2018-10-09T16:13:26.280-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: [signal SIGSEGV: segmentation violation code=0x1 addr=0x8 pc=0x2bdaf63]
+2018-10-09T16:13:26.280-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 
+2018-10-09T16:13:26.280-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: goroutine 193 [running]:
+2018-10-09T16:13:26.280-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: github.com/terraform-providers/terraform-provider-aws/aws.buildDynamoDbTableItemId(0xc000838fc0, 0x19, 0xc000605f10, 0x10, 0x0, 0x0, 0xc000c0bf20, 0x7b01440, 0x0)
+2018-10-09T16:13:26.280-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_dynamodb_table_item.go:248 +0x73
+2018-10-09T16:13:26.280-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: github.com/terraform-providers/terraform-provider-aws/aws.resourceAwsDynamoDbTableItemCreate(0xc000bfca80, 0x37125e0, 0xc00025e300, 0xc000bfca80, 0x0)
+2018-10-09T16:13:26.280-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_dynamodb_table_item.go:82 +0x3ec
+2018-10-09T16:13:26.280-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: github.com/terraform-providers/terraform-provider-aws/vendor/github.com/hashicorp/terraform/helper/schema.(*Resource).Apply(0xc0001d03f0, 0xc00060b090, 0xc0006ab080, 0x37125e0, 0xc00025e300, 0x100b601, 0xc0007d9b80, 0x10bc6ec)
+2018-10-09T16:13:26.280-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-aws/vendor/github.com/hashicorp/terraform/helper/schema/resource.go:225 +0x351
+2018-10-09T16:13:26.280-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: github.com/terraform-providers/terraform-provider-aws/vendor/github.com/hashicorp/terraform/helper/schema.(*Provider).Apply(0xc000bfc770, 0xc00060b040, 0xc00060b090, 0xc0006ab080, 0xc000062c00, 0x18, 0x7b01440)
+2018-10-09T16:13:26.280-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-aws/vendor/github.com/hashicorp/terraform/helper/schema/provider.go:283 +0x9c
+2018-10-09T16:13:26.281-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: github.com/terraform-providers/terraform-provider-aws/vendor/github.com/hashicorp/terraform/plugin.(*ResourceProviderServer).Apply(0xc0003ab8e0, 0xc0006aac20, 0xc000439c70, 0x0, 0x0)
+2018-10-09T16:13:26.281-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-aws/vendor/github.com/hashicorp/terraform/plugin/resource_provider.go:527 +0x57
+2018-10-09T16:13:26.281-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: reflect.Value.call(0xc0000a8cc0, 0xc0000a6008, 0x13, 0x3c5c16e, 0x4, 0xc0007d9f18, 0x3, 0x3, 0xc000093780, 0x358ad7, ...)
+2018-10-09T16:13:26.281-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 	/opt/goenv/versions/1.11.1/src/reflect/value.go:447 +0x449
+2018-10-09T16:13:26.281-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: reflect.Value.Call(0xc0000a8cc0, 0xc0000a6008, 0x13, 0xc000a4cf18, 0x3, 0x3, 0x0, 0x0, 0x0)
+2018-10-09T16:13:26.281-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 	/opt/goenv/versions/1.11.1/src/reflect/value.go:308 +0xa4
+2018-10-09T16:13:26.281-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: net/rpc.(*service).call(0xc0009fe040, 0xc00065a0a0, 0xc000542020, 0xc000542030, 0xc00017c180, 0xc0006fc560, 0x321b340, 0xc0006aac20, 0x16, 0x321b380, ...)
+2018-10-09T16:13:26.281-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 	/opt/goenv/versions/1.11.1/src/net/rpc/server.go:384 +0x14e
+2018-10-09T16:13:26.281-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: created by net/rpc.(*Server).ServeCodec
+2018-10-09T16:13:26.281-0700 [DEBUG] plugin.terraform-provider-aws_v1.39.0_x4: 	/opt/goenv/versions/1.11.1/src/net/rpc/server.go:481 +0x47e
+2018/10/09 16:13:26 [TRACE] root: eval: *terraform.EvalWriteState
+2018/10/09 16:13:26 [TRACE] root: eval: *terraform.EvalApplyProvisioners
+2018/10/09 16:13:26 [TRACE] root: eval: *terraform.EvalIf
+2018/10/09 16:13:26 [TRACE] root: eval: *terraform.EvalWriteState
+2018/10/09 16:13:26 [TRACE] root: eval: *terraform.EvalWriteDiff
+2018/10/09 16:13:26 [TRACE] root: eval: *terraform.EvalApplyPost
+2018/10/09 16:13:26 [ERROR] root: eval: *terraform.EvalApplyPost, err: 1 error(s) occurred:
+
+* aws_dynamodb_table_item.transit_connectivity: unexpected EOF
+2018/10/09 16:13:26 [ERROR] root: eval: *terraform.EvalSequence, err: 1 error(s) occurred:
+
+* aws_dynamodb_table_item.transit_connectivity: unexpected EOF
+2018/10/09 16:13:26 [TRACE] [walkApply] Exiting eval tree: aws_dynamodb_table_item.transit_connectivity
+2018/10/09 16:13:26 [TRACE] dag/walk: upstream errored, not walking "provider.aws (close)"
+2018/10/09 16:13:26 [TRACE] dag/walk: upstream errored, not walking "meta.count-boundary (count boundary fixup)"
+2018/10/09 16:13:26 [TRACE] dag/walk: upstream errored, not walking "root"
+2018-10-09T16:13:26.284-0700 [DEBUG] plugin: plugin process exited: path=/Users/dm250080/Documents/GitHub/icns-transitvpc2-provisioning/dynamodb/.terraform/plugins/darwin_amd64/terraform-provider-aws_v1.39.0_x4
+2018/10/09 16:13:26 [TRACE] Preserving existing state lineage "43eacba9-9431-001b-842e-6dd7d35bc411"
+2018/10/09 16:13:26 [TRACE] Preserving existing state lineage "43eacba9-9431-001b-842e-6dd7d35bc411"
+2018/10/09 16:13:26 [TRACE] Preserving existing state lineage "43eacba9-9431-001b-842e-6dd7d35bc411"
+2018/10/09 16:13:26 [TRACE] Preserving existing state lineage "43eacba9-9431-001b-842e-6dd7d35bc411"
+2018/10/09 16:13:26 [DEBUG] plugin: waiting for all plugin processes to complete...
+2018-10-09T16:13:26.296-0700 [WARN ] plugin: error closing client during Kill: err="connection is shut down"
